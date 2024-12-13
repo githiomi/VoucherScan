@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 public class Config {
@@ -18,10 +20,14 @@ public class Config {
     CommandLineRunner commandLineRunner(UserService service) {
         return args -> {
 
-            User user = new User("Daniel", "Githiomi", "danielgithiomi@gmail.com", "dhosiohoes", LocalDate.of(2001, 8, 27), Branch.GRAND_BAIE.getBranchId());
-            service.init(user);
+            List<User> users = Arrays.asList(
+                    new User("Faith", "Wamaitha", "wamaitha@gmail.com", "faithwama", LocalDate.of(1998, 7, 17), Branch.FLIC_EN_FLAC.getBranchId()),
+                    new User("Daniel", "Githiomi", "danielgithiomi@gmail.com", "dhosiohoes", LocalDate.of(2001, 8, 27), Branch.GRAND_BAIE.getBranchId()),
+                    new User("Nabila", "Modan", "nabilamodan@icloud.com", "amadmodan", LocalDate.of(2002, 4, 28), Branch.QUATRE_BORNES.getBranchId())
+            );
 
-            System.out.println("User Added");
+            service.saveAllUsers(users);
+            System.out.println("Users Added");
 
         };
     }

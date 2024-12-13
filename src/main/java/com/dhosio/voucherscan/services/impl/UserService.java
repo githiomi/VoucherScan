@@ -19,8 +19,16 @@ public class UserService {
         this.userRepository.save(user);
     }
 
+    public void init(List<User> users) {
+        this.userRepository.saveAll(users);
+    }
+
     public User saveUser(User user) {
         return userRepository.save(user);
+    }
+
+    public void saveAllUsers(List<User> users) {
+        this.userRepository.saveAll(users);
     }
 
     public List<User> getAll() {

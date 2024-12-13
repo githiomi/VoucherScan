@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class User {
 
-    private static int idCounter = 1;
+    private static int idCounter = 0;
 
     @Id
     private String empId;
@@ -27,7 +27,7 @@ public class User {
     private String branch;
 
     public User(String firstName, String lastName, String email, String password, LocalDate dob, String branch) {
-        this.empId = "IE00" + idCounter;
+        this.empId = "IE00" + (++idCounter);
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = generateName(firstName, lastName);
