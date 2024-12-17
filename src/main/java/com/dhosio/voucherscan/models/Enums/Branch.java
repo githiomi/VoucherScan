@@ -1,4 +1,4 @@
-package com.dhosio.voucherscan.models;
+package com.dhosio.voucherscan.models.Enums;
 
 public enum Branch {
 

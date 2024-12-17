@@ -2,7 +2,7 @@ package com.dhosio.voucherscan.controllers;
 
 import com.dhosio.voucherscan.models.ApiResponse;
 import com.dhosio.voucherscan.models.User;
-import com.dhosio.voucherscan.services.impl.UserService;
+import com.dhosio.voucherscan.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users/v1")
+@RequestMapping("/api/v1/users")
 public class UserController {
 
     private final UserService userService;

@@ -1,4 +1,4 @@
-package com.dhosio.voucherscan.services.impl;
+package com.dhosio.voucherscan.services;
 
 import com.dhosio.voucherscan.models.User;
 import com.dhosio.voucherscan.repositories.UserRepository;
