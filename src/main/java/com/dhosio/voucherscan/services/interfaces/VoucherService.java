@@ -1,4 +1,4 @@
-package com.dhosio.voucherscan.services;
+package com.dhosio.voucherscan.services.interfaces;
 
 public interface VoucherService {
 

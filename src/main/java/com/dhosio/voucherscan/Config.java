@@ -3,7 +3,7 @@ package com.dhosio.voucherscan;
 import com.dhosio.voucherscan.models.Enums.Branch;
 import com.dhosio.voucherscan.models.Enums.Gender;
 import com.dhosio.voucherscan.models.User;
-import com.dhosio.voucherscan.services.UserService;
+import com.dhosio.voucherscan.services.impl.UserServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
@@ -18,7 +18,7 @@ public class Config {
 
     @Bean
     @ConditionalOnProperty(prefix = "app", name = "manual.db.populate", havingValue = "true")
-    CommandLineRunner commandLineRunner(UserService service) {
+    CommandLineRunner commandLineRunner(UserServiceImpl service) {
         return args -> {
 
             List<User> users = Arrays.asList(

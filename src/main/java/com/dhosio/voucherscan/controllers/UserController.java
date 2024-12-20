@@ -2,7 +2,7 @@ package com.dhosio.voucherscan.controllers;
 
 import com.dhosio.voucherscan.models.ApiResponse;
 import com.dhosio.voucherscan.models.User;
-import com.dhosio.voucherscan.services.UserService;
+import com.dhosio.voucherscan.services.impl.UserServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,20 +17,20 @@ import java.util.List;
 @RequestMapping("/api/v1/users")
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userServiceImpl;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController(UserServiceImpl userServiceImpl) {
+        this.userServiceImpl = userServiceImpl;
     }
 
     @GetMapping("")
     public ResponseEntity<ApiResponse<List<User>>> getAllUsers() {
-        return new ResponseEntity<>(new ApiResponse<List<User>>(userService.getAll(), LocalDateTime.now(), true), HttpStatus.OK);
+        return new ResponseEntity<>(new ApiResponse<List<User>>(userServiceImpl.getAll(), LocalDateTime.now(), true), HttpStatus.OK);
     }
 
     @GetMapping("/{username}")
     public ResponseEntity<ApiResponse<User>> getUserByUsername(@PathVariable String username) {
-        return new ResponseEntity<>(new ApiResponse<User>(userService.findUserByUsername(username.toUpperCase()), LocalDateTime.now(), true), HttpStatus.OK);
+        return new ResponseEntity<>(new ApiResponse<User>(userServiceImpl.findUserByUsername(username.toUpperCase()), LocalDateTime.now(), true), HttpStatus.OK);
     }
 
 }

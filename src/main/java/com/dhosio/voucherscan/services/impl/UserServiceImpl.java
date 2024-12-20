@@ -1,4 +1,4 @@
-package com.dhosio.voucherscan.services;
+package com.dhosio.voucherscan.services.impl;
 
 import com.dhosio.voucherscan.models.User;
 import com.dhosio.voucherscan.repositories.UserRepository;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UserService {
+public class UserServiceImpl {
 
     private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

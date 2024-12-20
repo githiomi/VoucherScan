@@ -1,7 +1,7 @@
 package com.dhosio.voucherscan.controllers;
 
 import com.dhosio.voucherscan.models.ApiResponse;
-import com.dhosio.voucherscan.services.VoucherService;
+import com.dhosio.voucherscan.services.interfaces.VoucherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +37,6 @@ public class VoucherController {
         4. Expired
         5. Doesn't Exist
          */
-
         int response = this.voucherService.redeemVoucher(voucherId);
 
         return response == 0

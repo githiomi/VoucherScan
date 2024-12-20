@@ -1,6 +1,6 @@
 package com.dhosio.voucherscan.services.impl;
 
-import com.dhosio.voucherscan.services.VoucherService;
+import com.dhosio.voucherscan.services.interfaces.VoucherService;
 import org.springframework.stereotype.Service;
 
 import java.util.Random;
