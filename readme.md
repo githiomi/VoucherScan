@@ -23,6 +23,7 @@ The application was developed with the user of **Spring Security** and therefore
 | Username | Password   |
 |----------|------------|
 | user     | [password] |
+
 **PASSWORD** will be found in the terminal when the application is started
 
 ## MINIMUM SYSTEM REQUIREMENTS
