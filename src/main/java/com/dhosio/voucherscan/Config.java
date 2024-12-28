@@ -24,10 +24,8 @@ public class Config {
         return args -> {
 
             List<User> users = Arrays.asList(
-                    new User("Faith", "Wamaitha", Gender.FEMALE, "wamaitha@gmail.com", encoder().encode("faithwama"), LocalDate.of(1998, 7, 17), Branch.FLIC_EN_FLAC.getBranchId()),
                     new User("Daniel", "Githiomi", Gender.MALE, "danielgithiomi@gmail.com", encoder().encode("dangit123"), LocalDate.of(2001, 8, 27), Branch.GRAND_BAIE.getBranchId()),
-                    new User("Nabila", "Modan", Gender.OTHER, "nabilamodan@icloud.com", encoder().encode("amadmodan"), LocalDate.of(2002, 4, 28), Branch.QUATRE_BORNES.getBranchId()),
-                    new User("Yusuf", "Voisin", Gender.MALE, "yusufvoisin@gmail.com", encoder().encode("voisin35k"), LocalDate.of(1980, 12, 16), Branch.ROSE_BELLE.getBranchId())
+                    new User("Yusuf", "Voisin", Gender.MALE, "yusufvoisin@gmail.com", encoder().encode("voisin123"), LocalDate.of(1980, 12, 16), Branch.ROSE_BELLE.getBranchId())
             );
 
             service.saveAllUsers(users);
